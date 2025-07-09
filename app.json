@@ -1,0 +1,43 @@
+{
+  "name": "video-forward-bot",
+  "description": "Forward videos from one Telegram channel to another using a userbot.",
+  "env": {
+    "API_ID": {
+      "description": "Your Telegram API ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Your Telegram API HASH",
+      "required": true
+    },
+    "SESSION_NAME": {
+      "description": "Your saved session name (e.g. 'session')",
+      "required": true
+    },
+    "SOURCE_CHANNEL": {
+      "description": "Channel ID to forward from",
+      "required": true
+    },
+    "TARGET_CHANNEL": {
+      "description": "Channel ID to forward to",
+      "required": true
+    },
+    "VIDEO_ID_START": {
+      "description": "Start message ID (optional)",
+      "required": false
+    },
+    "VIDEO_ID_END": {
+      "description": "End message ID (optional)",
+      "required": false
+    },
+    "REVERSE": {
+      "description": "Set to 'true' to reverse order",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
