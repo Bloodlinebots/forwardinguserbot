@@ -1,37 +1,37 @@
 {
-  "name": "video-forward-bot",
-  "description": "Forward videos from one Telegram channel to another using a userbot.",
+  "name": "video-forward-userbot",
+  "description": "Telegram Userbot to forward videos from one channel to another using a string session.",
   "env": {
     "API_ID": {
-      "description": "Your Telegram API ID",
+      "description": "Telegram API ID (from https://my.telegram.org)",
       "required": true
     },
     "API_HASH": {
-      "description": "Your Telegram API HASH",
+      "description": "Telegram API HASH (from https://my.telegram.org)",
       "required": true
     },
-    "SESSION_NAME": {
-      "description": "Your saved session name (e.g. 'session')",
+    "STRING_SESSION": {
+      "description": "Your saved Telethon string session",
       "required": true
     },
     "SOURCE_CHANNEL": {
-      "description": "Channel ID to forward from",
+      "description": "Channel ID to forward FROM (negative number like -100xxxx)",
       "required": true
     },
     "TARGET_CHANNEL": {
-      "description": "Channel ID to forward to",
+      "description": "Channel ID to forward TO (negative number like -100xxxx)",
       "required": true
     },
     "VIDEO_ID_START": {
-      "description": "Start message ID (optional)",
+      "description": "Optional: Start message ID",
       "required": false
     },
     "VIDEO_ID_END": {
-      "description": "End message ID (optional)",
+      "description": "Optional: End message ID",
       "required": false
     },
     "REVERSE": {
-      "description": "Set to 'true' to reverse order",
+      "description": "Set to true if you want to forward in reverse order",
       "required": false
     }
   },
